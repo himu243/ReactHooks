@@ -1,0 +1,19 @@
+/*
+ -> Discuss how Performance Optimisation can be done using React.memo() as on one state param rendering render the whole entire component.
+ -> Start with the problem being faced if we don't use useCallback Hook
+
+ useCallbackHook: 
+
+ WHAT?
+
+ It is used to return a memoised version of callback function that only changes if one of the dependenices has changed.
+
+ WHY?
+
+ It is useful when passing callbacks to Optimised Child Components that rely on reference equality to prevent unnecessart renders. i.e. which use React.memo
+
+ HOW?
+
+See Implementation
+
+*/

@@ -1,0 +1,8 @@
+/*
+ -> Another Performance Optimisation Hook
+ -> Start with Showing 2 counter example 
+ -> Create isEven Function for one of the Counter Value
+ -> Add Loop for showing the complex task being executed and use it in one of the counter.
+ -> Without useMemo, it will lag whem the other counter is updating.
+ -> With useMemo along with the dependency, it will only lag when updating the component the lagging fxn is depending upon
+*/

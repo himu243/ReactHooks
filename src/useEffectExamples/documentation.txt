@@ -1,0 +1,45 @@
+// Side Effects are whatever is happening outside of DOM which is responsible for updating the DOM
+// For eg. API Call, Start/Stop Timer or Other Subscriptions like Internet Connectivity.
+/*
+
+EXAMPLES FOR MOTIVATION BEHIND USING USE EFFECT HOOK
+
+EXAMPLE 1: For Updating the Document Title, we are writing the same code twice
+
+componentDidMount() {
+    navigation.setOptions({
+        title: this.state.count;
+    })
+}
+
+componentDidUpdate() {
+    navigation.setOptions({
+        title: this.state.count;
+    })
+}
+
+EXAMPLE 2: Related code is seperated in different Lifecycle Methods
+
+componentDidMount() {
+    this.interval = setInterval(this.tick, 100);
+}
+
+componentWillUnmount() {
+    clearInterval(this.interval)
+}
+*/
+
+/*
+ Benifits of Using useEffect Hook
+ -> The Effect Hook will let you perform the Side Effects in a functional Components.
+ -> This is actually the replacement for componentDidMount, componentDidUpdate and componentWillUnmount LifeCycle Methods
+ 
+ useEffect(() => {}, []) --> componentDidMount
+ useEffect(() => {}, [dep1, dep2]) & useEffect(() => {}) --> componentDidUpdate
+ useEffect(() => {
+     return () => {
+         // add Code here which is to be added in componentWillUnmount
+         // For eg. Remove Subscriptions
+     }
+ }, []) --> 
+*/
