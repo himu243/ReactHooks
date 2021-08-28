@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, Text, TouchableOpacity, StyleSheet} from 'react-native';
+
 const HookCounter = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
   return (
     <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={() => setCount(count + 1)}>

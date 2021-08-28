@@ -22,6 +22,15 @@ const Stack = createNativeStackNavigator();
 
 /* Stack Screens  */
 /* Use State */
+const ClassCounterComponent = () => (
+  <Stack.Screen name="Class Counter" component={ClassCounter} />
+);
+const HookCounterComponent = () => (
+  <Stack.Screen name="Hook Counter" component={HookCounter} />
+);
+const HookCounter2Component = () => (
+  <Stack.Screen name="Hook Counter 2" component={HookCounter2} />
+);
 const UseStateWithArrayComp = () => (
   <Stack.Screen name="UseStateWithArray" component={UseStateWithArray} />
 );
@@ -68,7 +77,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {UseRefExampleComp()}
+        {ClassCounterComponent()}
+        {/* {UseRefExampleComp()} */}
         {/* {UseMemoExampleComp()} */}
         {/* {UseCallbackExampleComp()} */}
         {/* {UseEffectExampleOnlyOnceComp()} */}

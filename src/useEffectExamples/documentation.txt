@@ -35,11 +35,12 @@ componentWillUnmount() {
  -> This is actually the replacement for componentDidMount, componentDidUpdate and componentWillUnmount LifeCycle Methods
  
  useEffect(() => {}, []) --> componentDidMount
+
  useEffect(() => {}, [dep1, dep2]) & useEffect(() => {}) --> componentDidUpdate
  useEffect(() => {
      return () => {
          // add Code here which is to be added in componentWillUnmount
          // For eg. Remove Subscriptions
      }
- }, []) --> 
+ }, []) --> componentWillUnmount
 */

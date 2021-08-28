@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Keyboard, TextInput, View, Text} from 'react-native';
 import {useEffect, useState} from 'react/cjs/react.development';
+import UseKeyboardVisibility from '../CustomHookExample/UseKeyboardVisibility';
 
 // class UseEffectExampleOnlyOnce extends Component {
 //   constructor(props) {
@@ -46,20 +47,10 @@ import {useEffect, useState} from 'react/cjs/react.development';
 // }
 
 const UseEffectExampleOnlyOnce = () => {
+  // const [isKeyboardVisible] = UseKeyboardVisibility(); // Using Custom Hooks, You have to comment out the entire useEffect Hooks
   const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
   const [txt, setTxt] = useState('');
-  //   useEffect(() => {
-  //     console.log('Use Effect Called');
-  //     Keyboard.addListener('keyboardDidShow', () => {
-  //       setIsKeyboardVisible(true);
-  //     });
-  //   });
-  //   useEffect(() => {
-  //     console.log('Use Effect Called');
-  //     Keyboard.addListener('keyboardDidShow', () => {
-  //       setIsKeyboardVisible(true);
-  //     });
-  //   }, []);
+
   useEffect(() => {
     console.log('Use Effect Called');
     const keyboardDidShowListener = Keyboard.addListener(

@@ -13,11 +13,6 @@ class ClassCounter extends Component {
       count: this.state.count + 1,
     });
   };
-  decrementCount = () => {
-    this.setState({
-      count: this.state.count - 1,
-    });
-  };
   render() {
     return (
       <SafeAreaView style={styles.container}>
